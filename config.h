@@ -112,10 +112,10 @@ static Key keys[] = {
 	{ MODKEY,             			XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[0]} },
 //	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                     XK_space,  setlayout,      {0} },
+//	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                     	XK_space,  setlayout,      {0} },
 //	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY|ShiftMask,             XK_f,      fullscreen,     {0} },
+	{ MODKEY,             			XK_f,      fullscreen,     {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -132,7 +132,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	/* using win shift t to quit dwm t for terminate */
-	{ MODKEY|ShiftMask,             XK_t,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_t,      					quit,           {0} },
 	{ 0,                       		XF86XK_AudioLowerVolume, 	spawn, {.v = downvol } },
 	{ 0,                       		XF86XK_AudioMute, 			spawn, {.v = mutevol } },
 	{ 0,                       		XF86XK_AudioRaiseVolume, 	spawn, {.v = upvol   } },
