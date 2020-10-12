@@ -81,8 +81,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
+	/* rotate stack */
+//	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
+//	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = -1 } },
+	/* rotate stack ends */
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -106,7 +110,7 @@ static Key keys[] = {
 //	{ MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } },
 //	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
 //	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
-	/* ends vanitygaps */
+	/* vanitygaps ends */
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,             			XK_q,      killclient,     {0} },
