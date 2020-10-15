@@ -112,6 +112,8 @@ static Key keys[] = {
 //	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
 	/* vanitygaps ends */
 	{ MODKEY,                       XK_Return, zoom,           {0} },
+	/* additional key for toggle master */
+	{ Mod1Mask,                     XK_Tab, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,             			XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[0]} },
