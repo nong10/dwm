@@ -141,10 +141,12 @@ static Key keys[] = {
 	{ 0,                       		XF86XK_AudioLowerVolume, 	spawn, {.v = downvol } },
 	{ 0,                       		XF86XK_AudioMute, 			spawn, {.v = mutevol } },
 	{ 0,                       		XF86XK_AudioRaiseVolume, 	spawn, {.v = upvol   } },
-	{ MODKEY|ShiftMask,				XK_l,						spawn,		   {.v = suspend} },
 	{ 0,                            XF86XK_MonBrightnessUp,   	spawn, {.v = brightness_up } },
 	{ 0,                            XF86XK_MonBrightnessDown, 	spawn, {.v = brightness_down } },
-	{ MODKEY, 						XK_l, 						spawn, {.v = screenlock } }
+	/* suspend keybinding */
+	{ MODKEY|ShiftMask,				XK_p,						spawn, {.v = suspend} },
+	/* screenlock keybinding */
+	{ MODKEY|ShiftMask, 			XK_l, 						spawn, {.v = screenlock }}
 };
 
 /* button definitions */
