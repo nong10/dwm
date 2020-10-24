@@ -34,6 +34,8 @@ static const char *brightness_down[]	= { "/home/nong10/programs/scripts/brightne
 static const char *upvol[]   = { "/home/nong10/programs/scripts/volume", "-u", NULL};
 static const char *downvol[] = { "/home/nong10/programs/scripts/volume", "-d", NULL};
 static const char *mutevol[] = { "/home/nong10/programs/scripts/volume", "-m", NULL};
+	/* screen lock key mapping */
+static const char *screenlock[] = { "slock", NULL};
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -142,6 +144,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_l,						spawn,		   {.v = suspend} },
 	{ 0,                            XF86XK_MonBrightnessUp,   	spawn, {.v = brightness_up } },
 	{ 0,                            XF86XK_MonBrightnessDown, 	spawn, {.v = brightness_down } },
+	{ MODKEY, 						XK_l, 						spawn, {.v = screenlock } }
 };
 
 /* button definitions */
