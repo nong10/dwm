@@ -136,6 +136,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	/* nextprevtag */
+	{ MODKEY,              XK_i,           view_adjacent,  { .i = +1 } },
+	{ MODKEY,              XK_u,           view_adjacent,  { .i = -1 } },
+	/* nextprevtag ends */
 	/* using win shift t to quit dwm t for terminate */
 	{ MODKEY|ShiftMask,             XK_t,      					quit,           {0} },
 	{ 0,                       		XF86XK_AudioLowerVolume, 	spawn, {.v = downvol } },

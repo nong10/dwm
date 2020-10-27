@@ -254,6 +254,9 @@ static int xerror(Display *dpy, XErrorEvent *ee);
 static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
+/* nextprevtag patch manually added by nong10 */
+static void view_adjacent(const Arg *arg)
+/* end */
 
 /* variables */
 static const char broken[] = "broken";
@@ -2408,6 +2411,30 @@ zoom(const Arg *arg)
 			return;
 	pop(c);
 }
+
+/* patch nextprevtag manually added by nong10 */
+void
+view_adjacent(const Arg *arg)
+{
+	int i, curtags;
+	int seltag = 0;
+	Arg a;
+
+	curtags = selmon->tagset[selmon->seltags];
+	for(i = 0; i < LENGTH(tags); i++)
+		if(curtags & (1 << i)){
+			seltag = i;
+			break;
+		}
+
+	seltag = (seltag + arg->i) % (int)LENGTH(tags);
+	if(seltag < 0)
+		seltag += LENGTH(tags);
+
+	a.i = (1 << seltag);
+	view(&a);
+}
+/* end patch nextprevtag */
 
 int
 main(int argc, char *argv[])
