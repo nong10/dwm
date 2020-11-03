@@ -6,4 +6,4 @@
 *.diff
 ./patches/*
 ./patches/nextprevtag/*
-
+dwm
