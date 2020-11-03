@@ -2,3 +2,6 @@
 
 *.un~
 *.swp
+*.diff
+*.o
+patches/*
