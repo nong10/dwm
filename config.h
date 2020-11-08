@@ -34,6 +34,8 @@ static const char *downvol[] = { "/home/nong10/programs/scripts/volume", "-d", N
 static const char *mutevol[] = { "/home/nong10/programs/scripts/volume", "-m", NULL};
 	/* screen lock key mapping */
 static const char *screenlock[] = { "slock", NULL};
+	/* screenshot mapping */
+static const char *screenshot[] = { "flameshot", "full", "-p", "/home/nong10/Pictures/screenshots", NULL };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -118,7 +120,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_f,	   setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                     	XK_space,  setlayout,      {0} },
-//	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -149,6 +151,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_p,						spawn, {.v = suspend} },
 	/* screenlock keybinding */
 	{ MODKEY|ShiftMask, 			XK_l, 						spawn, {.v = screenlock }}
+	/* screenshot keybinding */
+	{ MODKEY|ShiftMask, 			XK_s, 						spawn, {.v = screenshot }}
 };
 
 /* button definitions */
