@@ -150,7 +150,7 @@ static Key keys[] = {
 	/* suspend keybinding */
 	{ MODKEY|ShiftMask,				XK_p,						spawn, {.v = suspend} },
 	/* screenlock keybinding */
-	{ MODKEY|ShiftMask, 			XK_l, 						spawn, {.v = screenlock }}
+	{ MODKEY|ShiftMask, 			XK_l, 						spawn, {.v = screenlock }},
 	/* screenshot keybinding */
 	{ MODKEY|ShiftMask, 			XK_s, 						spawn, {.v = screenshot }}
 };
