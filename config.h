@@ -16,7 +16,8 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#555577";
-static const char col_border[]        = "#3585C6";
+//static const char col_border[]        = "#7f0000"; 	// dark red
+static const char col_border[]        = "#3585C6"; 		// blue
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -113,7 +114,7 @@ static Key keys[] = {
 	/* vanitygaps ends */
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	/* additional key for toggle master */
-	{ Mod1Mask,                     XK_Tab, zoom,           {0} },
+	{ Mod1Mask,                     XK_Tab,    zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,             			XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[0]} },
