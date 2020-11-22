@@ -4,6 +4,7 @@
 *.swp
 *.o
 *.diff
+*.orig
 ./patches/*
 ./patches/nextprevtag/*
 dwm
