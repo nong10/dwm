@@ -26,7 +26,7 @@ static const char *colors[][3]      = {
 
 /* keybinding by nong10*/
 #include <X11/XF86keysym.h>
-static const char *suspend[] 		= { "systemctl", "suspend", NULL};
+static const char *suspend[] 		= { "systemctl", "suspend;", "slock", NULL};
 static const char *brightness_up[] 	= { "/home/nong10/programs/scripts/brightnessup.sh", NULL};
 static const char *brightness_down[]	= { "/home/nong10/programs/scripts/brightnessdown.sh", NULL};
 	/* volume solution */
