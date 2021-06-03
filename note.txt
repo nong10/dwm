@@ -1,0 +1,11 @@
+>> Short cuts <<
+
+[screens]
+Focus previous screen:
+	mod + ,
+Focus next screen:
+	mod + .
+Send window to previous screen:
+	mod + shift + ,
+Send window to next screen:
+	mod + shift + .
