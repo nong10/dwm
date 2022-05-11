@@ -1,3 +1,13 @@
+#### my build of dwm - dynamic window manager
+## scripts
+- statusbar in bash
+- volume control in c
+- brightness control in c
+- sleeping shortcut in c with systemctl
+- auto sleep in c with slock
+
+<hr>
+
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
