@@ -1,4 +1,4 @@
-#### my build of dwm - dynamic window manager
+# my build of dwm - dynamic window manager
 ## scripts
 - statusbar in bash
 - volume control in c
